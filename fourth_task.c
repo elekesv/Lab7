@@ -9,10 +9,22 @@
 
 */
 
-
 #include <stdio.h>
 
+int* checker(int x[], int y, int size){
+  for(int i = 0; i< size; i++){
+    if(*(x+i) == y)
+      return i+x;
+  }
+  return NULL;
+}
+
 int main(){
+  int arr[10] = {1,2,3,4,5,6,7,8,9,10};
+  printf("%d", checker(arr,4,10)-arr);
+
+
+
 
 
   return 0;
